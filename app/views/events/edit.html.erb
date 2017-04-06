@@ -1,0 +1,6 @@
+<%= form_for @event,:url=>{:controller=>'events',:action=>'update',:id=>@event} do |f| %>
+	<%= f.text_field :name %>
+	<%= f.label :description,"description" %>
+	<%= f.text_area :description %>
+	<%= f.submit "update" %><%= label :name,"Nmae" %>
+<% end %>

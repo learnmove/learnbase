@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   get "/welcome"=>"welcome#say"
   get "/welcome/say_hello"=>"welcome#index"
   root "welcome#index"
+  match ':controller(/:action(/:id(.:format)))',:via=>:all
 end
