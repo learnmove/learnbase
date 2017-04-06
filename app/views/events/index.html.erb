@@ -2,9 +2,11 @@
 <%= @events.each do |e| %>
 <li>
 <%= e.name %>
-<%= link_to "show" ,:controller=>"events",:action=>"show",:id=>e %>	
-<%= link_to "edit", :controller=>"events",:action=>"edit",:id=>e %>
-<%= link_to "刪除",:controller=>"events",:action=>"destroy",:id=>e  %>
+<%= link_to "show" ,event_path(e)%>	
+<%= link_to "getj son",event_path(e,:format=>:json)  %>
+<%= link_to "edit", edit_event_path(e)%>
+<%= link_to "刪除",event_path(e),:method=>:delete  %>
+
 </li>
 <% end %>
 </ul>
